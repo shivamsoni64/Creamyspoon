@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact Us {% endblock title %}
+
+
+
+{% block body %}
+
+    <div>
+        <img src="https://source.unsplash.com/1600x301/?telephone" class="d-block w-100" alt="...">
+    </div>
+<h1 class="my-3 text-center" style="color: #D8D8CA;"> We Are Here To Help </h1>
+
+
+<div class"container-fluid" style="color: #D8D8CA;">
+<form method="post" action="/contactus" >
+    {% csrf_token %}
+    <div class="form-group my-2 px-5 mx-5" >
+        <label for="name">Name -</label>
+        <input type="text" class="form-control " style="color:#3C0101;" id="name" name="name" placeholder="Enter you name ">
+    </div>
+    <div class="form-group my-2 px-5 mx-5">
+        <label for="email">Email -</label>
+        <input type="email" class="form-control" style="color:#3C0101;" id="email" name="email" placeholder="Enter you email id">
+    </div>
+    <div class="form-group my-2 px-5 mx-5" >
+        <label for="phone">Phone -</label>
+        <input type="phone" class="form-control" style="color:#3C0101;" id="phone" name="phone" placeholder="Enter you phone number">
+    </div>
+    <div class="form-group my-2 px-5 mx-5">
+        <label for="desc">Tell me about what you want to contact me for -</label>
+        <textarea class="form-control" style="color:#3C0101;" id="desc" rows="3" name="desc" ></textarea>
+    </div>
+    <button class="btn btn-dark btn-color btn-bg-color btn-sm col-xs-2 margin-left" type="submit"> Submit </button>
+
+    
+    
+</form>
+</div>
+
+
+
+{% endblock body %}
